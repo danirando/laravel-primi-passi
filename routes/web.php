@@ -3,7 +3,9 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('home');
+
+    $informazioni = "testo vario";
+    return view('home', compact('informazioni'));
 });
 
 Route::get('/about', fn () => view('about'))->name('about');
